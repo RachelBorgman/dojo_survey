@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="form_div">
+        <form action="/result" method="post" id="form">
+            <h1>Dojo Survey</h1>
+            <label for="name">Name:</label>
+                <input type='text' id="name" name='name'>
+            <label for="location">Location:</label>
+                <select name="location" id="location">
+                    <option></option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="NYC">New York City</option>
+                    <option value="LA">Los Angeles</option>
+                    <option value="Dallas">Dallas</option>
+                </select>
+            <label for="language">Favorite Language:</label>
+                <div class="language">
+                    <input type="radio" id="HTML" name="language" value="HTML">
+                    <label for="HTML">HTML</label>
+                </div>
+                <div class="language">
+                    <input type="radio" id="Python" name="language" value="Python">
+                    <label for="Python">Python</label>
+                </div>
+                <div class="language">
+                    <input type="radio" id="JavaScript" name="language" value="JavaScript">
+                    <label for="JavaScript">JavaScript</label>
+                </div>
+                <div class="language">
+                    <input type="radio" id="C #" name="language" value="C #">
+                    <label for="C #">C #</label>
+                </div>
+            <label for="comment">Comments:</label>
+                <input type="text" name='comment' class="text_box">
+            <input type='submit' value='Submit!' class="submit">
+        </form>
+    </div>
+</body>
+</html>
